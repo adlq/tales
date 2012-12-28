@@ -1,0 +1,4 @@
+<h1><%= link_to tale.title, tale %></h1>
+<p><%= tale.body %></p>
+<%= link_to "Edit", edit_tale_path(tale) %>
+<%= link_to "Remove", tale, method: :delete %>

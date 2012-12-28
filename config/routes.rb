@@ -1,4 +1,9 @@
 Tales::Application.routes.draw do
+
+  root to: "tales#index"
+
+  resources :tales
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
