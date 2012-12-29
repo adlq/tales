@@ -1,5 +1,7 @@
 @import "bootstrap";
 
+$separatorColor: #ddd;
+
 /* Universal properties */
 body {
 }
@@ -16,7 +18,7 @@ body {
     font-size: 15px;
     line-height: 20px;
   }
-  border-left: 1px solid #333;
+  border-left: 1px solid $separatorColor;
   padding-left: 50px;
 }
 
@@ -60,6 +62,6 @@ $width: 600px;
 /* Miscellaneous */
 .separator {
   margin: 60px 0px;
-  border-bottom: 1px dashed #333;
+  border-bottom: 1px solid $separatorColor; 
   width: 100%;
 }
