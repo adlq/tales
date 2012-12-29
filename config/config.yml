@@ -1,1 +1,10 @@
-fjd
+development:
+  perform_authentication: false
+
+test:
+  perform_authentication: false
+
+production:
+  perform_authentication: true
+  username: nghia
+  password: "5acea2e6f2a0812810bbe1620b296ed2"
