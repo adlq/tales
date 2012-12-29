@@ -7,4 +7,4 @@ test:
 production:
   perform_authentication: true
   username: nghia
-  password: "5acea2e6f2a0812810bbe1620b296ed2"
+  password: 5acea2e6f2a0812810bbe1620b296ed2
