@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   def authenticate
     if CONFIG['perform_authentication']
       authenticate_or_request_with_http_basic "Admin panel" do | login, password |
-        digest = Digest::MD5.hexdigext(password)
+        digest = Digest::MD5.hexdigest(password)
         if login == CONFIG['login'] && digest == CONFIG['password']
           session[:admin] = true
           true
