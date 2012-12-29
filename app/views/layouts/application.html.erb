@@ -12,11 +12,10 @@
       <div class="span3">
         <%= render 'layouts/sidebar' %>
       </div>
-      <div class="span6">
+      <div class="span8 tales_container">
         <%= render 'layouts/header' %>
         <%= yield %>
         <%= render 'layouts/footer' %>
-        <%= debug(params) if Rails.env.development? %>
       </div>
     </div>
   </div>

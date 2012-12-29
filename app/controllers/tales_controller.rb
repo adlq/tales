@@ -2,7 +2,7 @@ class TalesController < ApplicationController
   before_filter :authenticate, except: [:index, :show]
 
   def index
-    @tales = Tale.all
+    @tales = Tale.all.reverse
   end
 
   def new

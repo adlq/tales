@@ -1,10 +1,9 @@
-development:
-  perform_authentication: false
+perform_authentication: true
+login: nghia
+password: 5acea2e6f2a0812810bbe1620b296ed2
+blog_name: TALES
+author: Nghia D.
+motto: Some smart-ass motto
+email: tnghia.duong@gmail.com
+github: adlq
 
-test:
-  perform_authentication: false
-
-production:
-  perform_authentication: true
-  login: nghia
-  password: 5acea2e6f2a0812810bbe1620b296ed2
