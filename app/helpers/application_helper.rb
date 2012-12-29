@@ -20,4 +20,14 @@ module ApplicationHelper
     markdown = Redcarpet::Markdown.new(renderer, options)
     markdown.render(text).html_safe
   end
+
+  # Returns appropriate date format
+  def formatDate(date)
+    date.to_formatted_s(:month_day_year)
+  end
+
+  # Returns whether the admin is connected or not
+  def is_admin?
+    session[:admin]
+  end
 end

@@ -7,12 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="hero-unit">
+  <div class="container">
     <div class="row-fluid">
-      <div class="span4">
+      <div class="span3">
         <%= render 'layouts/sidebar' %>
       </div>
-      <div class="span8">
+      <div class="span6">
         <%= render 'layouts/header' %>
         <%= yield %>
         <%= render 'layouts/footer' %>

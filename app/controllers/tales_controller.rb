@@ -1,4 +1,6 @@
 class TalesController < ApplicationController
+  before_filter :authenticate, except: [:index, :show]
+
   def index
     @tales = Tale.all
   end
