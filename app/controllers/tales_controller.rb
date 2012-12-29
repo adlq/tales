@@ -5,6 +5,10 @@ class TalesController < ApplicationController
     @tales = Tale.all.reverse
   end
 
+  def admin
+
+  end
+
   def new
     @tale = Tale.new
   end
