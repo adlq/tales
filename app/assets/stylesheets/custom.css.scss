@@ -7,9 +7,15 @@ body {
 /* Containers */
 .container {
   padding-top: 60px;
+  padding-left: 30px;
+  background-color: $white;
 }
 
 .tales_container {
+  p {
+    font-size: 15px;
+    line-height: 20px;
+  }
   border-left: 1px solid #333;
   padding-left: 50px;
 }
@@ -20,9 +26,9 @@ h1 h2 h3 h4 h5 h6 {
 
 /* Links */
 a {
-  color: #b94a48;
+  color: $pink;
   &:hover {
-    color: $pink;
+    color: #b94a48;
     text-decoration: none;
   }
 }
