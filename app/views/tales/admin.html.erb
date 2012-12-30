@@ -10,7 +10,7 @@
 
   <div class="span6">
     <h1>Draft</h1>
-    <% if not @published_tales.empty %>
+    <% if not @draft_tales.empty %>
       <% @draft_tales.each do |draft_tale| %>
         <%= link_to draft_tale.title, edit_tale_path(draft_tale) %><br />
       <% end %>
