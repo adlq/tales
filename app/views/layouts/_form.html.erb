@@ -1,19 +1,14 @@
 <%= form_for @tale, html: { class: "nice_form form-inline" } do |f| %>
 
-  <%= f.text_field :title %><br />
+  <%= f.text_field :title %><br /><br />
 
   <%= f.text_area :body %>
 
-  <br />
-  <div class="publish_box">
-    <div class="left">
-      <%= f.label :published, "READY" %>
-      <%= f.check_box :published %>
-    </div>
-    <div class="right">
-      <%= link_to "BACK", "/admin" %>
-      <%= f.submit "SAVE" %>
-    </div>
-  </div>
+  <br /><br />
+  <%= f.select :published, [['Draft', false], ['Published', true]] %>
+  <br /><br />
+  <%= button_tag type: "submit", class: "big_button" do %>
+    <i class="icon-save icon-white"></i>
+  <% end %>
 
 <% end %>

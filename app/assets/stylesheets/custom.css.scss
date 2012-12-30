@@ -1,6 +1,9 @@
 @import "bootstrap";
 
 $separatorColor: #ddd;
+$normalFont : "Open Sans";
+$titleFont: "Raleway";
+
 /* Mixins */
 
 @mixin round_corners {
@@ -11,8 +14,16 @@ $separatorColor: #ddd;
 
 /* Universal properties */
 body {
+  font-family: $normalFont;
 }
 
+.icon-white {
+  color: $white;
+}
+
+.icon-black {
+  color: $black;
+}
 /* Containers */
 
 $right_width: 60%;
@@ -26,13 +37,11 @@ $right_width: 60%;
 
 .right_container {
   .tale {
-    font-family: "Open Sans";
     font-size: 15px;
     line-height: 23px;
     width: $right_width;
     blockquote {
       p {
-        font-family: "Open Sans";
         font-weight: normal;
         font-size: 15px;
       }
@@ -45,8 +54,20 @@ $right_width: 60%;
       text-decoration: underline;
     }
 
-    h1, h2, h3 {
+    h1 {
       font-size: 18px;
+    }
+
+    h2 {
+      font-size: 16px;
+      text-decoration: underline;
+      font-weight: normal;
+    }
+
+    h3, h4, h5, h6 {
+      font-size: 15px;
+      text-decoration: underline;
+      font-weight: normal;
     }
   }
 
@@ -64,11 +85,11 @@ $right_width: 60%;
 
 /* Titles */
 h1 h2 h3 h4 h5 h6 {
-  font-family: Raleway;
+  font-family: $titleFont;
 }
 
 .blog_title, .tale_title {
-  font-family: Raleway;
+  font-family: $titleFont;
   font-weight: bold;
   color: black;
 
@@ -90,44 +111,48 @@ a {
 $width: 100%;
 
 .nice_form {
+  
+  label {
+    font-family: $normalFont;
+  }
 
   input[type=text] {
     border: none;
     border-bottom: 5px solid #333;
+    font-family: $normalFont;
     font-size: 30px;
     font-weight: bold;
+    color: $black;
     width: $width;
     height: 40px;
     padding: 5px;
   }
 
   textarea {
+    font-family: $normalFont;
+    color: $grayDarker;
     border: none;
     width: $width;
   }
 
-  input[type=checkbox] {
-    margin: 0;
+  select {
+    @include round_corners;
+    width: $width;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: $normalFont;
+    font-weight: bold;
+    border: 1px dashed $grayDark;
+    background-color: $white;
   }
   
-  input[type=submit], a {
-    @include round_corners;
-    border: 1px solid $grayDark;
-    background-color: $yellow;
-    padding: 10px;
-    font-weight: bold;
-    color: $grayDarker;
-
-    &:hover {
-      background-color: $white;
-    }
-  }
 }
 
 
 
 label {
   color: $white;
+  font-size: 30px;
 }
 
 .publish_box {
@@ -138,7 +163,6 @@ label {
   background-color: #111;
   padding: 10px;
   margin-top: 20px;
-  font-family: $monoFontFamily;
   font-weight: bold;
 }
 
@@ -190,13 +214,14 @@ label {
 
 .big_button {
   @include round_corners;
+  border: none;
   font-weight: bold;
-  font-size: 40px;
-  background-color: $black;
+  font-size: 20px;
+  background-color: $black; 
   text-align: center;
   width: 100%;
   margin: 0px;
-  padding: 10px 0px;
+  padding: 20px 0px 10px 0px;
   &:hover {
     background-color: $orange;
   }
