@@ -7,11 +7,11 @@
   <br />
   <div class="publish_box">
     <div class="left">
-      <%= f.label :published %>
+      <%= f.label :published, "READY" %>
       <%= f.check_box :published %>
     </div>
     <div class="right">
-      <%= f.submit 'Preview', :preview => true, :target => "_blank" %>
+      <%= link_to "BACK", "/admin" %>
       <%= f.submit "SAVE" %>
     </div>
   </div>

@@ -1,0 +1,13 @@
+<div class="admin_li">
+  <%= link_to tale.title, edit_tale_path(tale)  %>
+  <div class="right">
+    <%= link_to tale, class: "hidden_button" do %>
+      <i class='icon-eye-open'></i>
+    <% end %>
+    <%= link_to tale, confirm: "Are you sure?", method: :delete, class: "hidden_button" do %>
+      <i class='icon-trash'></i>
+    <% end %>
+  </div>
+  <br />
+  <span class="admin_date" ><%= formatDate tale.created_at %></span>
+</div>

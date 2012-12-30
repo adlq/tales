@@ -1,15 +1,21 @@
+  <%= link_to new_tale_path do %>
+    <div class="big_button">
+      <i class='icon-pencil icon-white'></i>
+    </div>
+  <% end %>
 <div class="row-fluid">
   <div class="span6">
-    <h1>Published</h1>
-    <% @published_tales.each do |published_tale| %>
-      <%= link_to published_tale.title, edit_tale_path(published_tale) %><br />
+    <h1>Drafts</h1>
+    <% @draft_tales.each do |tale| %>
+      <%= render partial: 'layouts/admin_li', locals: { tale: tale } %>
     <% end %>
   </div>
 
   <div class="span6">
-    <h1>Draft</h1>
-    <% @draft_tales.each do |draft_tale| %>
-      <%= link_to draft_tale.title, edit_tale_path(draft_tale) %><br />
+    <h1>Published</h1>
+    <% @published_tales.each do |tale| %>
+      <%= render partial: 'layouts/admin_li', locals: { tale: tale } %>
     <% end %>
   </div>
+
 </div>

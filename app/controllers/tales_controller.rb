@@ -6,6 +6,7 @@ class TalesController < ApplicationController
   end
 
   def admin
+    @tale = Tale.new
     @tales = Tale.all.reverse
     @published_tales = Tale.where(published:true).reverse
     @draft_tales = Tale.where(published:false).reverse
@@ -46,7 +47,7 @@ class TalesController < ApplicationController
 
   def destroy
     Tale.find(params[:id]).destroy
-    redirect_to root_path
+    redirect_to action: "admin"
   end
 
 end

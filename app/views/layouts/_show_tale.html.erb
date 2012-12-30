@@ -1,12 +1,6 @@
 <%= formatDate tale.created_at %>
 <h1><%= link_to tale.title, tale %></h1>
-<%= markdown_format tale.body %>
-<% if is_admin? %>
-  <%= link_to(edit_tale_path(tale)) do %>
-    <i class='icon-edit'></i>
-  <% end %>
-  <%= link_to(tale, method: :delete) do %>
-    <i class='icon-ban-circle'></i>
-  <% end %>
-<% end %>
+<div class="tale">
+  <%= markdown_format tale.body %>
+</div>
 <div class="separator"></div>
