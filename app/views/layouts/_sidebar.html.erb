@@ -1,5 +1,8 @@
-<%= image_tag "N.png", alt: "" %>
-<h1><%= link_to CONFIG['blog_name'], root_path %></h1>
+<%= link_to root_path do %>
+  <%= image_tag "N.png", alt: "" %>
+<% end %>
+
+<h1><%= link_to CONFIG['blog_name'], root_path, class: "blog_title" %></h1>
 <h4><%= CONFIG['motto'] %></h4>
 <p><%= CONFIG['author'] %></p>
 

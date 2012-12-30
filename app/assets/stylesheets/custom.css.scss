@@ -26,16 +26,28 @@ $right_width: 60%;
 
 .right_container {
   .tale {
+    font-family: "Open Sans";
     font-size: 15px;
     line-height: 23px;
     width: $right_width;
     blockquote {
       p {
+        font-family: "Open Sans";
+        font-weight: normal;
         font-size: 15px;
       }
-      border-left: 5px solid $orange;
+      border-left: 10px solid $orange;
     }
 
+    a {
+      color: $black;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    h1, h2, h3 {
+      font-size: 18px;
+    }
   }
 
   hr {
@@ -52,13 +64,24 @@ $right_width: 60%;
 
 /* Titles */
 h1 h2 h3 h4 h5 h6 {
+  font-family: Raleway;
+}
+
+.blog_title, .tale_title {
+  font-family: Raleway;
+  font-weight: bold;
+  color: black;
+
+  &:hover {
+    text-decoration: none;
+    color: black;
+  }
 }
 
 /* Links */
+
 a {
-  color: $pink;
   &:hover {
-    color: #b94a48;
     text-decoration: none;
   }
 }
@@ -138,6 +161,9 @@ label {
 
 .admin_link {
   color: $grayLight;
+  &:hover {
+    color: $grayLight;
+  }
 }
 
 .admin_li {

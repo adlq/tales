@@ -1,6 +1,25 @@
 <%= formatDate tale.created_at %>
-<h1><%= link_to tale.title, tale %></h1>
+<h1><%= link_to tale.title, tale, class: "tale_title" %></h1>
 <div class="tale">
   <%= markdown_format tale.body %>
 </div>
+<% if is_admin? %>
+  <br /><br />
+  <div class="row-fluid">
+    <div class="span4">
+      <%= link_to edit_tale_path(tale) do %>
+        <div class="big_button">
+          <i class='icon-edit icon-white'></i>
+        </div>
+      <% end %>
+    </div>
+    <div class="span4">
+      <%= link_to tale, method: :delete, confirm: "Are you sure?" do %>
+        <div class="big_button">
+          <i class='icon-trash icon-white'></i>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>
 <div class="separator"></div>
