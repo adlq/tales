@@ -11,10 +11,6 @@ class TalesController < ApplicationController
     @draft_tales = Tale.where(published:false).reverse
   end
 
-  def admin
-
-  end
-
   def new
     @tale = Tale.new
   end
