@@ -2,6 +2,8 @@ Tales::Application.routes.draw do
 
   root to: "tales#index"
 
+  match "/admin", to: "tales#admin"
+
   resources :tales
 
   # The priority is based upon order of creation:

@@ -1,6 +1,13 @@
 @import "bootstrap";
 
 $separatorColor: #ddd;
+/* Mixins */
+
+@mixin round_corners {
+          border-radius: 5px;
+     -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
 
 /* Universal properties */
 body {
@@ -13,7 +20,7 @@ body {
   background-color: $white;
 }
 
-.tales_container {
+.right_container {
   p {
     font-size: 15px;
     line-height: 20px;
@@ -56,7 +63,48 @@ $width: 600px;
     width: $width;
   }
 
+  input[type=submit] {
+    @include round_corners;
+    border: none;
+    background-color: $yellow;
+    padding: 10px;
+    font-weight: bold;
+
+    &:hover {
+      background-color: $white;
+    }
+  }
+
+  input[type=checkbox] {
+    margin: 0;
+  }
   
+}
+
+label {
+  color: $white;
+}
+
+.publish_box {
+  @include round_corners;
+  overflow: hidden;
+  width: $width;
+  border: none;
+  background-color: #111;
+  padding: 10px;
+  margin-top: 20px;
+  font-family: $monoFontFamily;
+  font-weight: bold;
+}
+
+.right {
+  float: right;
+  display: inline;
+}
+
+.left {
+  float: left;
+  display: inline-block;
 }
 
 /* Miscellaneous */
@@ -68,4 +116,7 @@ $width: 600px;
 
 blockquote {
   border-left: 5px solid $yellow;
+}
+.admin_link {
+  color: $grayLight;
 }

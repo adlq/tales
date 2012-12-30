@@ -1,0 +1,15 @@
+<div class="row-fluid">
+  <div class="span6">
+    <h1>Published</h1>
+    <% @published_tales.each do |published_tale| %>
+      <%= link_to published_tale.title, edit_tale_path(published_tale) %><br />
+    <% end %>
+  </div>
+
+  <div class="span6">
+    <h1>Draft</h1>
+    <% @draft_tales.each do |draft_tale| %>
+      <%= link_to draft_tale.title, edit_tale_path(draft_tale) %><br />
+    <% end %>
+  </div>
+</div>

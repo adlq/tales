@@ -2,7 +2,13 @@ class TalesController < ApplicationController
   before_filter :authenticate, except: [:index, :show]
 
   def index
+    @tales = Tale.where(published:true).reverse
+  end
+
+  def admin
     @tales = Tale.all.reverse
+    @published_tales = Tale.where(published:true).reverse
+    @draft_tales = Tale.where(published:false).reverse
   end
 
   def admin
@@ -36,7 +42,7 @@ class TalesController < ApplicationController
     @tale = Tale.find(params[:id])
     
     if @tale.update_attributes(params[:tale])
-      redirect_to @tale
+      redirect_to action: "admin"
     else
       render 'edit' 
     end

@@ -1,10 +1,19 @@
-<%= form_for @tale, html: { class: "nice_form" } do |f| %>
+<%= form_for @tale, html: { class: "nice_form form-inline" } do |f| %>
 
   <%= f.text_field :title %><br />
 
   <%= f.text_area :body %>
 
   <br />
-  <%= f.submit "Save", class: "btn"  %>
+  <div class="publish_box">
+    <div class="left">
+      <%= f.label :published %>
+      <%= f.check_box :published %>
+    </div>
+    <div class="right">
+      <%= f.submit 'Preview', :preview => true, :target => "_blank" %>
+      <%= f.submit "SAVE" %>
+    </div>
+  </div>
 
 <% end %>
