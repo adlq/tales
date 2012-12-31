@@ -1,6 +1,6 @@
 <%= formatDate tale.created_at %>
-<h1><%= link_to tale.title, tale, class: "tale_title" %></h1>
 <div class="tale">
+  <h1><%= link_to tale.title, tale, class: "tale_title" %></h1>
   <%= markdown_format tale.body %>
 </div>
 <div class="separator"></div>

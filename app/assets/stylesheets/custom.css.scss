@@ -40,6 +40,11 @@ $right_width: 60%;
     font-size: 15px;
     line-height: 23px;
     width: $right_width;
+      .tale_title {
+        font-size: 25px;
+        text-decoration: none;
+      }
+
     blockquote {
       p {
         font-weight: normal;
